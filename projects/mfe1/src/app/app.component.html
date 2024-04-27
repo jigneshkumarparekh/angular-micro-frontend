@@ -1,0 +1,20 @@
+<h1>This app can be loaded as Micro Frontend</h1>
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/test-component" routerLinkActive="active"
+        >Test component</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/user-component"
+        routerLinkActive="active"
+        (click)="setName()"
+        >User component</a
+      >
+    </li>
+  </ul>
+</nav>
+<span>Click above link and it will load the component below:</span>
+<router-outlet />
