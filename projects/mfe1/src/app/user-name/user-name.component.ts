@@ -10,13 +10,8 @@ import { UserService } from '../services/user.service';
   templateUrl: './user-name.component.html',
   styleUrl: './user-name.component.scss',
 })
-export class UserNameComponent implements OnInit {
-  @Input() name: string = '';
+export class UserNameComponent {
   userName$: Observable<string> = this.userService.userName$;
 
   constructor(private userService: UserService) {}
-
-  ngOnInit(): void {
-    this.userService.setUserName(this.name);
-  }
 }
