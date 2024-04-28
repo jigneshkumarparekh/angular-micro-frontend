@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { UserService } from '../services/user.service';
+import { UserService } from 'common-lib';
 
 @Component({
   selector: 'app-user-name',
