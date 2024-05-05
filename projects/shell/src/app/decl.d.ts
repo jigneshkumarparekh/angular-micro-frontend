@@ -1,1 +1,2 @@
-declare module 'mfe1/Component/UserName';
+// ONLY NEEDED FOR MODULE FEDERATION, NOT FOR DYNAMIC FEDERATION
+// declare module 'mfe1/Component/UserName';
