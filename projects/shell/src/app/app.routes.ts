@@ -9,13 +9,24 @@ export const routes: Routes = [
      */
     // loadComponent: () =>
     //   import('mfe1/Component/UserName').then((m) => m.UserNameComponent),
+
+    // /**
+    //  * This will use Dynamic federation to load the modules dynamically
+    //  */
+    // loadComponent: () =>
+    //   loadRemoteModule({
+    //     type: 'module',
+    //     remoteEntry: 'http://localhost:4201/remoteEntry.js',
+    //     exposedModule: './Component/UserName',
+    //   }).then((c) => c.UserNameComponent),
+
     /**
-     * This will use Dynamic federation to load the modules dynamically
+     * This will load MF from manifest file for dynamic urls.
      */
     loadComponent: () =>
       loadRemoteModule({
-        type: 'module',
-        remoteEntry: 'http://localhost:4201/remoteEntry.js',
+        type: 'manifest',
+        remoteName: 'mfe1',
         exposedModule: './Component/UserName',
       }).then((c) => c.UserNameComponent),
   },
