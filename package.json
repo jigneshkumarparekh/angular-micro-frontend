@@ -8,9 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
-    "build-docker-image": "docker build -t ng-workspace-nginx-docker .",
-    "run-docker": "docker run --rm -p 80:80 --add-host ng-workspace.com:127.0.0.1 ng-workspace-nginx-docker",
-    "deploy-to-docker": "npm run build-docker-image && npm run run-docker"
+    "build-docker-image": "docker build -t ng-workspace-nginx-image .",
+    "run-docker": "docker run -d -p 80:80 ng-workspace-nginx-image",
+    "deploy-to-docker": "npm run build-docker-image && npm run run-docker",
+    "deploy-to-local-nginx": "npm run build && cp -r ./dist/* /opt/homebrew/var/www/ng-app && brew services restart nginx"
   },
   "private": true,
   "dependencies": {
