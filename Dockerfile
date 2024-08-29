@@ -11,8 +11,8 @@ RUN npm run build
 
 FROM nginx:latest
 
-# Install "vi" editor for inspection
-RUN apt-get update && apt-get install -y vim
+# # Install "vi" editor for inspection
+# RUN apt-get update && apt-get install -y vim
 
 COPY --from=build /app/dist /usr/share/nginx/html/ng-workspace
 
