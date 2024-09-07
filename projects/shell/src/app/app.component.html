@@ -3,4 +3,8 @@
   Click links below to load remote component:
   <a routerLink="/remote-user" routerLinkActive="active">Remote user name</a>
 </div>
+<div>
+  <h2>Counter: {{ counterService.counter | async }}</h2>
+  <button (click)="counterService.increaseCounter()">Increase counter</button>
+</div>
 <router-outlet />

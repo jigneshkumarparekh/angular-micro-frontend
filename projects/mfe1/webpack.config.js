@@ -9,6 +9,7 @@ module.exports = withModuleFederationPlugin({
   exposes: {
     "./Component/UserName":
       "./projects/mfe1/src/app/user-name/user-name.component.ts",
+    "./Component/Test": ".//projects/mfe1/src/app/test/test.component.ts",
   },
   shared: {
     ...shareAll({

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { UserService } from 'common-lib';
+import { CounterService, UserService } from 'common-lib';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,10 @@ import { UserService } from 'common-lib';
 export class AppComponent implements OnInit {
   title = 'shell';
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    public counterService: CounterService
+  ) {}
 
   ngOnInit(): void {
     this.userService.setUserName('John Doe');
